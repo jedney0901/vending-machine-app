@@ -9,7 +9,7 @@ class VendingMachine extends Component {
     return (
       <div className="vendingMachine bordered">
         Hi there, please enter the coins you currently have. {this.props.userCredit}
-        <SelectCoin coins={this.props.coins}/>
+        <SelectCoin coins={this.props.coins} updateCredit={this.props.addCredit}/>
         {/*Need to add in confirmPurchase functionality*/}
         <Button label='Purchase' onClick={this.props.confirmPurchase}/>
       </div>
