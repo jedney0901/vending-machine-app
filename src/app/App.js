@@ -10,20 +10,36 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentOrder: {
-        credit: 0,
-        selected: [],
-        spent: 0,
-        confirm: 'No'
-      }
+      credit: 0,
+      selected: [],
+      spent: 0,
+      confirm: 'No'
     }
+    this.updateCredit = this.updateCredit.bind(this)
+    this.confirmPurchase = this.confirmPurchase.bind(this)
   };
+
+
+  updateCredit(coin) {
+    this.setState({
+      credit: this.state.credit + coin.amount
+    })
+  }
+
+
+  confirmPurchase() {
+    
+  }
 
   render() {
     return (
       <div className="App">
         Hello World
-        <VendingMachine userCredit={this.state.currentOrder.credit} products={Products} coins={Coins}/>
+        <VendingMachine
+          userCredit={this.state.credit}
+          products={Products} coins={Coins}
+          addCredit={this.updateCredit}
+        />
         <OrderSummary/>
         <PickUp/>
       </div>

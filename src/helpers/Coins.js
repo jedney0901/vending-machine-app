@@ -1,22 +1,27 @@
 var Coins = [
   {
-    cost: '10',
+
+    amount: '10',
     type: '$0.1'
   },
   {
-    cost: '20',
+
+    amount: '20',
     type: '$0.2'
   },
   {
-    cost: '50',
+
+    amount: '50',
     type: '$0.5'
   },
   {
-    cost: '100',
+
+    amount: '100',
     type: '$1'
   },
   {
-    cost: '200',
+
+    amount: '200',
     type: '$2'
   }
 ]
