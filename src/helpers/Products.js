@@ -1,4 +1,4 @@
-export default Products = [
+var Products = [
   {
     name: 'Caramel',
     cost: '250',
@@ -13,3 +13,4 @@ export default Products = [
   }
 ]
 
+export default Products
