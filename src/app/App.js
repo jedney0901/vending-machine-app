@@ -9,10 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       credit: 0,
-      totalValue: [],
       selected: [],
       confirm: 'no'
-    }
+    };
     this.updateCredit = this.updateCredit.bind(this)
     this.selectProducts = this.selectProducts.bind(this)
     this.resetOrder = this.resetOrder.bind(this)
@@ -23,13 +22,14 @@ class App extends Component {
     this.setState({
       credit: this.state.credit += coin.amount
     })
-  }
+  };
 
   resetOrder() {
     this.setState({
       selected: [],
+      credit: 0
     })
-  }
+  };
 
   selectProducts(product) {
     return this.state.credit < product.cost ?
@@ -37,15 +37,15 @@ class App extends Component {
       :
       this.setState({
         credit: this.state.credit -= product.cost,
-        selected: [...product.name]
+        selected: [...this.state.selected, product.name]
       })
-  }
+  };
 
   confirmPurchase() {
     this.setState({
       confirm: 'yes'
     })
-  }
+  };
 
   render() {
     return (
@@ -55,7 +55,6 @@ class App extends Component {
           currentOrder={this.state.selected}
           confirmationStatus={this.state.confirm}
           products={Products} coins={Coins}
-          add
           addCredit={this.updateCredit}
           addProduct={this.selectProducts}
           resetOrder={this.resetOrder}
