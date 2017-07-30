@@ -1,5 +1,7 @@
 import React from 'react';
 import chai from 'chai';
+const expect = chai.expect();
+
 
 // app components
 import App from '../app/App';
@@ -8,8 +10,6 @@ import VendingMachine from '../vending_machine/VendingMachine'
 // helpers
 import Products from '../helpers/Products'
 import Coins from '../helpers/Coins'
-
-var expect = chai.expect();
 
 
 describe('App Component', () => {
@@ -48,23 +48,14 @@ describe('App Component', () => {
     vendingMachine = VendingMachine(props)
   })
 
-  it('App component should exist', () => {
-
-  });
-
   describe('Vending Machine Component unit tests', () => {
 
     it('should have available currency as props', () => {
-      expect(vendingMachine.props.products.to.equal(this.props.products))
+      expect(vendingMachine.props.products.to.equal(props.products))
     });
 
     it('should have available products as props', () => {
-
-    });
-
-    it('should have state as props', () => {
-
+      expect(vendingMachine.props.coins.to.equal(props.coins))
     });
   })
 })
-
