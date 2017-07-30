@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import VendingMachine from '../vending_machine/VendingMachine'
-import OrderSummary from '../order_summary/OrderSummary'
-import PickUp from '../pickup/PickUp.js'
 import Products from '../helpers/Products.js'
 import Coins from '../helpers/Coins.js'
 
@@ -10,10 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedCurrency: [],
       credit: 0,
       totalValue: [],
-      selected: ['hello'],
+      selected: [],
       confirm: 'no'
     }
     this.updateCredit = this.updateCredit.bind(this)
@@ -39,7 +36,8 @@ class App extends Component {
       alert('There is not enough credit!')
       :
       this.setState({
-        selected: this.state.selected.push(product)
+        credit: this.state.credit -= product.cost,
+        selected: [...product.name]
       })
   }
 
@@ -52,19 +50,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello World
         <VendingMachine
           userCredit={this.state.credit}
+          currentOrder={this.state.selected}
+          confirmationStatus={this.state.confirm}
           products={Products} coins={Coins}
           add
           addCredit={this.updateCredit}
           addProduct={this.selectProducts}
           resetOrder={this.resetOrder}
+          confirmOrder={this.confirmPurchase}
         />
-        <OrderSummary
-          selectedProducts={this.state.selected}
-        />
-        <PickUp/>
       </div>
     );
   }

@@ -32,3 +32,11 @@
     border-width: 3px;
     border-color: black;
 }
+
+.btnStyles {
+    height: 40px;
+    width: 60px;
+    background-color: #F3C719;
+    border-radius: 10px;
+    margin: 20px;
+}

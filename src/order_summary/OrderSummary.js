@@ -5,13 +5,14 @@ class OrderSummary extends Component {
 
   render() {
     return (
-      this.props.selectedProducts.count > 0 ?
-        <div className="orderSummary bordered">
-          {this.props.selectedProducts.map((product, i) => <li key={i}> {product.name} </li>)}
-        </div> :
-        <div>
-        </div>
-    );
+      <div>
+        {this.props.confirmationStatus === 'yes' ?
+          <div>Thanks, you have ${this.props.userCredit/100} remaining!</div>
+            :
+          <div></div>
+        }
+      </div>
+    )
   }
 }
 
