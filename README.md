@@ -7,7 +7,6 @@
 * [Design process](#design-process)
     * Tech choice
 	* Planning
-	* Implementation
 * [Challenges](#challenges)
 * [Reflections](#reflections)
 * [Next steps](#next-steps)
@@ -60,36 +59,34 @@ across the country to get awesome vegan snacks.
 * ReactJS
     - To build an app quickly such as this I thought it would be perfect for something like create-react-app which lets me spin up an app pretty quickly and would also allow me to showcase modu.
 * Mocha Chai
-    - I wanted confidence in my code and so attempted a TDD approach to solving this challenge (see reflections)
-* Ramda
-    - Continuing my learning of Ramda js to compose and reuse smaller functions
+    - I had been recently doing high code coverage on a previous project I had completed for an internship and wanted to see whether I could replicate this.
 
 ### Planning
 
 Part of the planning involved:
 
-* Making decisions about the file/folder structure. Keeping things modular rather than hacking things together in one file.
-* Breaking down the app into manageable parts based on functionality.
-    - view layer of the sudoku board and buttons
-    - formatting user input
-    - populating and rendering sudoku board with input
-    - resetting sudoku board
-    - validating rows, columns and regions
-    - solving the sudoku
-
-### Implementation
-
-Create an implementation order based on the features that build on top of each other
-
+* Decisions about the file/folder structure. As this is a react app I wanted to make sure things were modular and separeted them as per that requirement.
+* Decisions about state management and also how I managed my functionality.
+* Breaking down the app into components based on functionality.
+    - Vending Machine Component
+    - Available currency component
+    - Available product component
+    - Managing the available credit and remaining credit after a purchase
 
 # Challenges
 
-A list of challenges I faced:
+This app development wasn't complex in nature but more just required careful consideration around the planning based on the brief provided and then writing the required functionality. React seemed like a good framework as this was going to be a fairly small dynamic app to manage and I couldn't foresee any significant issues with the time required to build each different component. The biggest issue I had was actually just setting up my test environment and getting into a TDD approach which I had been practising previously while working on a project at an internship. I wanted to try and use Mocha/Chai for testing and had started writing out my tests but not in a TDD approach and more as a post-development validation requirement incase I was to make changes in the future.
 
 
 # Reflections
 
+- Setup your test environment first and use TDD approach from the beginning.
+- Review how functions are currently modifying state as currently they are changing state directly.
 
 # Next steps
+
+- Build an order summary component which shows what they have ordered so far, how much they have spent and how much credit they have remaining with a cashout option.
+- Write my unit tests for the app.
+- Update layout and make it more user friendly.
 
 
