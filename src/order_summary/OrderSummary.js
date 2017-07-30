@@ -5,9 +5,12 @@ class OrderSummary extends Component {
 
   render() {
     return (
-      <div className="orderSummary bordered">
-        Hello Worlds
-      </div>
+      this.props.selectedProducts.count > 0 ?
+        <div className="orderSummary bordered">
+          {this.props.selectedProducts.map((product, i) => <li key={i}> {product.name} </li>)}
+        </div> :
+        <div>
+        </div>
     );
   }
 }

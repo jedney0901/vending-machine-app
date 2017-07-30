@@ -1,6 +1,5 @@
 import React from 'react';
 import chai from 'chai';
-import mocha from 'mocha'
 import {Button} from 'react-toolbox/lib/button'
 
 // app components
@@ -41,7 +40,6 @@ describe('App components', () => {
 
   describe('App Components should exist', () => {
     coinButtons.should('exist', () => {
-
     })
   })
 });
