@@ -9,7 +9,6 @@ class App extends Component {
     super(props);
     this.state = {
       credit: 0,
-      totalValue: [],
       selected: [],
       confirm: 'no'
     }
@@ -28,6 +27,7 @@ class App extends Component {
   resetOrder() {
     this.setState({
       selected: [],
+      credit: 0
     })
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
       :
       this.setState({
         credit: this.state.credit -= product.cost,
-        selected: [...product.name]
+        selected: [...product]
       })
   }
 
@@ -55,7 +55,6 @@ class App extends Component {
           currentOrder={this.state.selected}
           confirmationStatus={this.state.confirm}
           products={Products} coins={Coins}
-          add
           addCredit={this.updateCredit}
           addProduct={this.selectProducts}
           resetOrder={this.resetOrder}

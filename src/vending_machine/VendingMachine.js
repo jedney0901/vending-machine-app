@@ -13,20 +13,40 @@ let btnStyles = {
   margin: '20px',
   backgroundColor: 'black',
   color: 'white'
-}
+};
 
 class VendingMachine extends Component {
 
   render() {
     return (
-      <div className="vendingMachine" style={textStyles}>
+      <div
+        className="vendingMachine"
+        style={textStyles}
+      >
         Hi there, welcome to your healthy vending machine, enter your coins in to proceed.
-        <SelectCoin coins={this.props.coins} updateCredit={this.props.addCredit} />
+        <SelectCoin
+          coins={this.props.coins}
+          updateCredit={this.props.addCredit}
+        />
         Your current credit is ${this.props.userCredit/100}, please choose your product's once you have enough credit.
-        <SelectProducts products={this.props.products} selectProducts={this.props.addProduct}/>
-        <Button style={btnStyles} label='Purchase' onClick={this.props.confirmOrder}/>
-        <Button style={btnStyles} label='Reset' onClick={this.props.resetPurchase}/>
-        <OrderSummary confirmationStatus={this.props.confirmationStatus} userCredit={this.props.userCredit}/>
+        <SelectProducts
+          products={this.props.products}
+          selectProducts={this.props.addProduct}
+        />
+        <Button
+          style={btnStyles}
+          label='Purchase'
+          onClick={this.props.confirmOrder}
+        />
+        <Button
+          style={btnStyles}
+          label='Reset'
+          onClick={this.props.resetOrder}
+        />
+        <OrderSummary
+          confirmationStatus={this.props.confirmationStatus}
+          userCredit={this.props.userCredit}
+        />
       </div>
     );
   }

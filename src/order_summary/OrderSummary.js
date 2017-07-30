@@ -6,10 +6,11 @@ class OrderSummary extends Component {
   render() {
     return (
       <div>
-        {this.props.confirmationStatus === 'yes' ?
-          <div>Thanks, you have ${this.props.userCredit/100} remaining!</div>
+        {
+          this.props.confirmationStatus === 'yes' ?
+            <div>Thanks, you have ${this.props.userCredit / 100} remaining!</div>
             :
-          <div></div>
+            <div></div>
         }
       </div>
     )
