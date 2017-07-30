@@ -1,15 +1,15 @@
 var Products = [
   {
     name: 'Caramel',
-    cost: '250',
+    cost: 250,
   },
   {
     name: 'Hazelnut',
-    cost: '310',
+    cost: 310,
   },
   {
     name: 'Organic Raw',
-    cost: '200',
+    cost: 200,
   }
 ]
 

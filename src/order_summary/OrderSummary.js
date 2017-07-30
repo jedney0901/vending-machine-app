@@ -5,10 +5,14 @@ class OrderSummary extends Component {
 
   render() {
     return (
-      <div className="orderSummary bordered">
-        Hello Worlds
+      <div>
+        {this.props.confirmationStatus === 'yes' ?
+          <div>Thanks, you have ${this.props.userCredit/100} remaining!</div>
+            :
+          <div></div>
+        }
       </div>
-    );
+    )
   }
 }
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import chai from 'chai';
-import mocha from 'mocha'
 import {Button} from 'react-toolbox/lib/button'
+import SelectCoin from '../select_coin/SelectCoin.js'
+import VendingMachine from '../vending_machine/VendingMachine'
+
 
 // app components
 import App from './App';
@@ -11,37 +13,30 @@ import Products from '../helpers/products'
 
 var should = chai.should();
 
+describe('App Component', () => {
+  let app,
+    selectCoin,
+    selectProduct,
+    vendingMachine,
+    props
 
-describe('App components', () => {
-  let coinButtons,
-    props,
-    initialState,
-    stateSoFar,
-    app,
-    Products
+    beforeEach('set props', () => {
+      props = {
+        initialState: this.state,
+      }
+    })
 
-  beforeEach('set initial state', () => {
-    initialState = {
-      credit: 0,
-      selected: "some selected state",
-      spent: 0
-    }
+  beforeEach('setup App Component', () => {
+    app = App(props)
+    vendingMachine = VendingMachine(props)
+  })
+
+  it('should exist', () => {
+    app.should.exist
   });
 
-  beforeEach('set props', () => {
-    props = {
-      products: Products
-    }
-  })
+  it('adds money when they insert a coin', () => {
 
-  beforeEach('setup components', () => {
-    app = App(props, initialState)
-    coinButtons = Button(this.state, Button)
   })
+})
 
-  describe('App Components should exist', () => {
-    coinButtons.should('exist', () => {
-
-    })
-  })
-});
