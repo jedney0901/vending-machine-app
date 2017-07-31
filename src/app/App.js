@@ -12,6 +12,7 @@ class App extends Component {
       selected: [],
       confirm: 'no'
     };
+
     this.updateCredit = this.updateCredit.bind(this)
     this.selectProducts = this.selectProducts.bind(this)
     this.resetOrder = this.resetOrder.bind(this)
@@ -54,7 +55,8 @@ class App extends Component {
           userCredit={this.state.credit}
           currentOrder={this.state.selected}
           confirmationStatus={this.state.confirm}
-          products={Products} coins={Coins}
+          products={Products}
+          coins={Coins}
           addCredit={this.updateCredit}
           addProduct={this.selectProducts}
           resetOrder={this.resetOrder}
@@ -62,7 +64,8 @@ class App extends Component {
         />
       </div>
     );
-  }
+  };
 }
 
-export default App;
+
+export default App
