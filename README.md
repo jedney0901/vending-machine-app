@@ -75,18 +75,18 @@ Part of the planning involved:
 
 # Challenges
 
-This app development wasn't complex in nature but more just required careful consideration around the planning based on the brief provided and then writing the required functionality. React seemed like a good framework as this was going to be a fairly small dynamic app to manage and I couldn't foresee any significant issues with the time required to build each different component. The biggest issue I had was actually just setting up my test environment and getting into a TDD approach which I had been practising previously while working on a project at an internship. I wanted to try and use Mocha/Chai for testing and had started writing out my tests but not in a TDD approach and more as a post-development validation requirement incase I was to make changes in the future.
-
+The app required careful consideration around the planning based on the brief provided and then writing the required functionality to suit the core logic. React seemed like a good framework as this was going to be a fairly small dynamic app to manage and I couldn't foresee any significant issues in structuring the app as I could use create-react-app framework to get me started quickly. The biggest issue I had was actually just setting up my test environment and getting into a TDD approach which I had been practising previously while working on a project at an internship. I wanted to try and use Mocha/Chai for testing and had started writing out my tests but not in a TDD approach and more as a post-development validation requirement incase I was to make changes in the future. I realised that because I was trying to test with Mocha/Chai that I was running into issues with the way create-react-app is configured in regards to testing. This led to me spending a large portion of time understanding jest and leading me to run out of time.
 
 # Reflections
 
 - Setup your test environment first and use TDD approach from the beginning.
 - Review how functions are currently modifying state as currently they are changing state directly.
+- I didn't have a good enough understanding of Jest to write my unit tests for everything. Need to work on transitioning between frameworks for testing and making sure that it works for my environment.
 
 # Next steps
 
 - Build an order summary component which shows what they have ordered so far, how much they have spent and how much credit they have remaining with a cashout option.
-- Write my unit tests for the app.
+- Write my unit tests for the app functionality in jest.
 - Update layout and make it more user friendly.
 
 
