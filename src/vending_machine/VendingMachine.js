@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './VendingMachine.css'
-import { Button } from 'react-toolbox/lib/button/Button'
+import {Button} from 'react-toolbox/lib/button/Button'
 import SelectCoin from '../select_coin/SelectCoin.js'
 import SelectProducts from '../select_products/SelectProducts.js'
-import OrderSummary from "../order_summary/OrderSummary";
+import OrderSummary from "../order_summary/OrderSummary"
 
 let textStyles = {
   color: '#70C5CA',
@@ -28,7 +28,7 @@ class VendingMachine extends Component {
           coins={this.props.coins}
           updateCredit={this.props.addCredit}
         />
-        Your current credit is ${this.props.userCredit/100}, please choose your product's once you have enough credit.
+        Your current credit is ${this.props.userCredit / 100}, please choose your product's once you have enough credit.
         <SelectProducts
           products={this.props.products}
           selectProducts={this.props.addProduct}
@@ -37,19 +37,22 @@ class VendingMachine extends Component {
           style={btnStyles}
           label='Purchase'
           onClick={this.props.confirmOrder}
+          className="confirmOrder"
         />
         <Button
           style={btnStyles}
           label='Reset'
           onClick={this.props.resetOrder}
+          className="resetOrder"
         />
         <OrderSummary
           confirmationStatus={this.props.confirmationStatus}
           userCredit={this.props.userCredit}
         />
       </div>
-    );
-  }
+    )
+  };
 }
+
 
 export default VendingMachine;

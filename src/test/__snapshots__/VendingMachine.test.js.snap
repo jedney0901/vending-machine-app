@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vending Machine Component Confirm Order Button renders and matches our snapshot 1`] = `
+<button
+  className=" confirmOrder"
+  data-react-toolbox="button"
+  disabled={false}
+  href={undefined}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Purchase
+</button>
+`;
+
+exports[`Vending Machine Component Order Summary component renders and matches our snapshot 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Vending Machine Component Reset Order Button renders and matches our snapshot 1`] = `
+<button
+  className=" resetOrder"
+  coins={
+    Array [
+      Object {
+        "amount": 10,
+        "type": "$0.1",
+      },
+      Object {
+        "amount": 20,
+        "type": "$0.2",
+      },
+      Object {
+        "amount": 50,
+        "type": "$0.5",
+      },
+      Object {
+        "amount": 100,
+        "type": "$1",
+      },
+      Object {
+        "amount": 200,
+        "type": "$2",
+      },
+    ]
+  }
+  data-react-toolbox="button"
+  disabled={false}
+  href={undefined}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+  updateCredit={[Function]}
+/>
+`;
+
+exports[`Vending Machine Component SelectProduct component renders and matches our snapshot 1`] = `
+<div>
+  <button
+    className=""
+    data-react-toolbox="button"
+    disabled={false}
+    href={undefined}
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F3C719",
+        "borderRadius": "10px",
+        "height": "40px",
+        "margin": "20px",
+        "width": "60px",
+      }
+    }
+    type="button"
+  >
+     
+    Caramel
+     $
+    2.5
+     
+  </button>
+  <button
+    className=""
+    data-react-toolbox="button"
+    disabled={false}
+    href={undefined}
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F3C719",
+        "borderRadius": "10px",
+        "height": "40px",
+        "margin": "20px",
+        "width": "60px",
+      }
+    }
+    type="button"
+  >
+     
+    Hazelnut
+     $
+    3.1
+     
+  </button>
+  <button
+    className=""
+    data-react-toolbox="button"
+    disabled={false}
+    href={undefined}
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F3C719",
+        "borderRadius": "10px",
+        "height": "40px",
+        "margin": "20px",
+        "width": "60px",
+      }
+    }
+    type="button"
+  >
+     
+    Organic Raw
+     $
+    2
+     
+  </button>
+</div>
+`;
