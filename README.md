@@ -41,8 +41,8 @@ across the country to get awesome vegan snacks.
 
 * Javascript
 * React - create-react-app
-* Mocha
-* Chai
+* Jest
+* Enzyme
 
 # User stories
 
@@ -59,7 +59,8 @@ across the country to get awesome vegan snacks.
 * ReactJS
     - To build an app quickly such as this I thought it would be perfect for something like create-react-app which lets me spin up an app pretty quickly and would also allow me to showcase modu.
 * Mocha Chai
-    - I had been recently doing high code coverage on a previous project I had completed for an internship and wanted to see whether I could replicate this.
+    - I had been recently doing high code coverage on a previous project I had completed for an internship and wanted to see whether I could replicate this. Unfortunately I had trouble setting up my testing environment so I reverted back to Jest/Enzyme and started working through that.
+* Jest Enzyme
 
 ### Planning
 
